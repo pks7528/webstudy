@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="box1"></div>
+    <script>
+        // while
+        /* 
+        var n = 1;
+        while(n <=5 ){
+            document.getElementById('box1').innerHTML += (n + '&nbsp;&nbsp;');
+            n++;
+        } 
+        */
+        
+        // for
+        for(let n=1; n<=5; n++){
+            document.getElementById('box1').innerHTML += (n + '&nbsp;&nbsp;');  /* let사용하면 지역변수 n,, for문 안에서만 사용 가능 */
+        }
+        /*  
+        for(var n=1; n<=5; n++){
+            document.getElementById('box1').innerHTML += (n + '&nbsp;&nbsp;');    
+        } */
+        </script>
+        
+        <div id="box2"></div>
+        <script>
+                       
+            /* <select name="month">
+                <option value="">월</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+             </select>  */
+                          
+            var str = '<select name="month"><option value="">월</option>';
+            for(let m = 1; m<=12; m++){
+                str += '<option value="' + m + '">' + m + '월</option>';
+            }
+            str += '</select>';
+            document.getElementById('box2').innerHTML = str;    
+        </script>
+
+    <div id="box3"></div>
+    <script>
+        var str = '';
+        for(let n = 1; n <= 10; n++){
+            str += '<img src="../../images/animal' + n + '.jpg" width="100px">';
+        }
+        document.getElementById('box3').innerHTML = str;
+    </script>
+</body>
+</html>
