@@ -12,43 +12,42 @@
             <li>
                 운동
                 <ul type="circle">
-                    <li>축구</li>
+                    <li>축구
                         <ul type="square">
                             <li>공격수</li>
                             <li>수비수</li>
                             <li>골키퍼</li>
                         </ul>
-                    <li>야구</li>
+                    </li>
+                    <li>야구
                         <ul type="square">
                             <li>투수</li>
                             <li>포수</li>
                             <li>야수</li>
                         </ul>
+                    </li>
                 </ul>
             </li>
-                
         </ul>
     </div>
 
     <div>
         <dl>
-            <dt>
-                준비물
-                <dd>
-                    <ul type="square">
-                        <li>김치</li>
-                        <li>참치</li>
-                    </ul>
-                </dd>
-            </dt>
+            <dt>준비물</dt>
+            <dd>
+                <ul type="square">
+                    <li>김치</li>
+                    <li>참치</li>
+                </ul>
+            </dd>
             <dt>조리법</dt>
-                <dd>
-                    <ol>
-                        <li>물을 500cc 넣고 끓인다.</li>
-                        <li>김치를 넣는다.</li>
-                        <li>참치를 넣는다.</li>
-                    </ol>
-                </dd>
+            <dd>
+                <ol>
+                    <li>물을 500cc 넣고 끓인다.</li>
+                    <li>김치를 넣는다.</li>
+                    <li>참치를 넣는다.</li>
+                </ol>
+            </dd>
         </dl>
     </div>
     
@@ -97,8 +96,6 @@
                     </li>
                 </ol>
             </dd>
-        </dl>
-        <dl>
             <dt>몇 시에 일어나시나요?</dt>
             <dd>
                 <ol type="1">
@@ -145,15 +142,15 @@
             </div>
             <div>
                 <label for="pw">
-                    비밀번호
+                    비밀번호 확인
                     <input type="password" placeholder="비밀번호 확인" id="pw">
                 </label>
             </div>
             <div>
-                <laber for="email">
+                <label for="email">
                     이메일
                     <input type="text" placeholder="이메일" id="email">
-                </laber>
+                </label>
                 <span>@</span>
                 <input type="text" placeholder="직접 입력" list="site">
                 <datalist id="site">
@@ -224,7 +221,7 @@
             </div>
 
             <div>
-                <label for="introduce">자기 소개</label><br>
+                <div><label for="introduce">자기 소개</label></div>
                 <textarea rows="5" cols="40" placeholder="200자 이내 간단히 작성"></textarea>
             </div>
 
@@ -242,30 +239,30 @@
             </div>
             <div>
                 <button>제출</button>
-
                 <input type="reset" value="다시입력">
             </div>
         </form>
     </div>  
-
-</body>
-</html>
-
+    
     <!-- 
         submit 할 때 서버 측에서 입력 요소를 인식하려면 name 속성이 반드시 필요하다.
         
         name 속성이 필요한 곳
         <input type=text>, <input type=password>, <input type=radio>
         <input type=checkbox>, <input type=file>, <select>, <textarea>
-
+    
         라벨은 프론트단에서 규칙??을 지키기 위해서 작성
         name 작성하지 않는다
-
+    
         value 속성이 필요한 곳 (사용자가 입력하지 않는 입력 요소 : 선택하거나 고르거나 ...)
         <input type=radio>
         <input type=checkbox>
         <select> 태그의 각 <option>
         
      -->
+     
+</body>
+</html>
+
 
      
