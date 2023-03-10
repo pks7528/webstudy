@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보수정</title>
+</head>
+<body>
+    <div>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>이메일</td>
+                    <td>
+                        <input type="text">
+                        <span>@</span>
+                        <input type="text" placeholder="선택 또는 직접입력" list="site">
+                        <datalist id="site">
+                            <option value="naver.com"></option>
+                            <option value="kakao.com"></option>
+                            <option value="gmail.com"></option>
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>생일</td>
+                    <td>
+                        <input type="text" maxlength="4" size="4">년
+                        <input type="text" maxlength="2" size="2">월
+                        <input type="text" maxlength="2" size="2">일
+                    </td>
+                </tr>
+                <tr>
+                    <td>거주도시</td>
+                    <td>
+                        <select>
+                            <option>서울</option>
+                            <option>광주</option>
+                            <option>대구</option>
+                            <option>대전</option>
+                            <option>부산</option>
+                            <option>울산</option>
+                            <option>인천</option>
+                            <option>기타</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>성별</td>
+                    <td>
+                        <label for="male">
+                            <input type="radio" id="male" name="gender" value="male">남자
+                        </label>
+                        <label for="female">
+                            <input type="radio" id="female" name="gender" value="female">여자
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>관심분야</td>
+                    <td>
+                        <label for="trip">
+                            <input type="checkbox" id="trip" value="1">여행
+                        </label>
+                        <label for="movie">
+                            <input type="checkbox" id="movie" value="2">영화
+                        </label>
+                        <label for="book">
+                            <input type="checkbox" id="book" value="4">독서
+                        </label>
+                        <label for="music">
+                            <input type="checkbox" id="music" value="8">음악
+                        </label>
+                        <label for="no">
+                            <input type="checkbox" id="no" value="16">관심없음
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>자기소개</td>
+                    <td>
+                        <textarea rows="5" cols="50"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="location.href='login.html'">수정완료</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
