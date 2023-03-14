@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-      <script src="../resources/js/lib/jquery-3.6.4.min.js"></script>
-   </head>
-   <body>
-      <script>
-         /* 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../resources/js/lib/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <script>
+      /* 
             jQuery 이벤트
 
             1. 이전 이벤트 처리 메소드(현재 사용하지 않기를 권장)
@@ -36,41 +36,41 @@
                         $(이벤트대상).off('이벤트타입')
                 
         */
-         $.each(() => {
-            console.log();
-         });
-      </script>
-      <div>
-         <a href="https://www.naver.com" target="_blank" class="link">네이버</a>
-         <a href="https://www.kakao.com" target="_blank" class="link">카카오</a>
-         <a href="https://www.google.com" target="_blank" class="link">구글</a>
-      </div>
-      <script>
-         // 이벤트리스너는 화살표 함수를 사용하지 않는다. (화살표 함수에는 this에 바인딩 된 객체가 없기 때문이다.)
-         $('.link').on('click', function (event) {
-            if ($(event.target).text() == '구글') {
-               alert($(this).text() + '로 이동이 불가능합니다.');
-               event.preventDefault(); // a 태그의 기본 클릭 이벤트는 href로 이동하는 것인데 이걸 막는 코드이다.(등록된 기본 이벤트를 수행하지 마시오.)
-               return; // 이벤트 리스너를 종료시킨다.
-            }
-            alert($(this).text() + '로 이동합니다.'); // 네이버로 이동합니다. 카카오로 이동합니다.
-         });
-      </script>
+      $.each(() => {
+        console.log();
+      });
+    </script>
+    <div>
+      <a href="https://www.naver.com" target="_blank" class="link">네이버</a>
+      <a href="https://www.kakao.com" target="_blank" class="link">카카오</a>
+      <a href="https://www.google.com" target="_blank" class="link">구글</a>
+    </div>
+    <script>
+      // 이벤트리스너는 화살표 함수를 사용하지 않는다. (화살표 함수에는 this에 바인딩 된 객체가 없기 때문이다.)
+      $('.link').on('click', function (event) {
+        if ($(event.target).text() == '구글') {
+          alert($(this).text() + '로 이동이 불가능합니다.');
+          event.preventDefault(); // a 태그의 기본 클릭 이벤트는 href로 이동하는 것인데 이걸 막는 코드이다.(등록된 기본 이벤트를 수행하지 마시오.)
+          return; // 이벤트 리스너를 종료시킨다.
+        }
+        alert($(this).text() + '로 이동합니다.'); // 네이버로 이동합니다. 카카오로 이동합니다.
+      });
+    </script>
 
-      <div id="box"></div>
-      <script>
-         // <div id="box">에 요소를 추가한다. (동적 요소)
-         $('#box').append('<button id="btn">버튼</button>');
+    <div id="box"></div>
+    <script>
+      // <div id="box">에 요소를 추가한다. (동적 요소)
+      $('#box').append('<button id="btn">버튼</button>');
 
-         // 동적 요소에 이벤트 등록하기
-         $('#btn').on('click', function () {
-            $(this).after('<p>하하하</p>'); // 이벤트 리스너에서 동적 요소 생성하기
-         });
+      // 동적 요소에 이벤트 등록하기
+      $('#btn').on('click', function () {
+        $(this).after('<p>하하하</p>'); // 이벤트 리스너에서 동적 요소 생성하기
+      });
 
-         // 이벤트로 생성한 동적 요소에 이벤트 등록하기
-         $('#box').on('click', 'p', function () {
-            $(this).css('background-color', 'yellow');
-         });
-      </script>
-   </body>
+      // 이벤트로 생성한 동적 요소에 이벤트 등록하기
+      $('#box').on('click', 'p', function () {
+        $(this).css('background-color', 'yellow');
+      });
+    </script>
+  </body>
 </html>
